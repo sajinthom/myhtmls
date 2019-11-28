@@ -9,8 +9,6 @@
 </head>
 
 <body onload="changeVideo()">
-
-
     <script>
         function queryStringToJSON(query) {
             var setValue = function (root, path, value) {
@@ -36,7 +34,7 @@
                 if (!Array.isArray(pair) || pair.length != 2) {
                     continue;
                 }
-                var name = decodeURIComponent(pair[0]);
+                var name = decodeURIComponent(pair[0]).toLowerCase();
                 var value = decodeURIComponent(pair[1]);
 
                 var path = name.match(/(^[^\[]+)(\[.*\]$)?/);
@@ -59,8 +57,8 @@
 
         function changeVideo() {
             var playerParams = queryStringToJSON(window.location.search.substring(1));
-            var accId = playerParams["accountId"];
-            var vidId = playerParams["videoId"];
+            var accId = playerParams["accountid"];
+            var vidId = playerParams["videoid"];
             var srcString = "https://players.brightcove.net/" + accId + "/default_default/index.min.js";
             var video = document.getElementById('video');
             video.setAttribute('data-account', accId);
