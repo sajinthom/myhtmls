@@ -59,7 +59,13 @@
             var playerParams = queryStringToJSON(window.location.search.substring(1));
             var accId = playerParams["accountid"];
             var vidId = playerParams["videoid"];
-            var srcString = "https://players.brightcove.net/" + accId + "/default_default/index.min.js";
+            var playId = "default";
+            if (playerParams["playerid"]) {
+                playId = playerParams["playerid"];
+            }
+
+
+            var srcString = "https://players.brightcove.net/" + accId + "/" + playId + "_default/index.min.js";
             var video = document.getElementById('video');
             video.setAttribute('data-account', accId);
             video.setAttribute('data-video-id', vidId);
