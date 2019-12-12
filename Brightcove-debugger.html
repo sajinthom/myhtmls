@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>BC Player Debugger</title>
+</head>
+
+<body>
+
+    <video-js id="myPlayerID"
+      data-video-id="6114486101001"
+        data-account="6057984925001"
+        data-player="default"
+        data-embed="default"
+        data-application-id
+        class="video-js"
+        controls
+        width="822"
+        height="462"></video-js>
+    <script src="https://players.brightcove.net/6057984925001/default_default/index.min.js"></script>
+
+  <!-- BC Player Debugger styles and script -->
+    <link href="https://learning-services-media.brightcove.com/doc-assets/css/debugger/videojs-player-debugger.css" rel="stylesheet">
+    <script src="https://learning-services-media.brightcove.com/doc-assets/js/debugger/videojs-player-debugger.min.js"></script>
+
+  <!-- page script -->
+    <script>
+      var myPlayer = videojs.getPlayer('myPlayerID');
+      myPlayer.ready(function(){
+        var options = {"debugAds":false, "logClasses": true};
+        myPlayer.playerDebugger(options);
+      });
+    </script>
+
+</body>
+</html>
