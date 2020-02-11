@@ -67,11 +67,12 @@
             var video = document.getElementById('video');
             video.setAttribute('data-account', accId);
             video.setAttribute('data-video-id', vidId);
+            video.setAttribute('data-player', playId);
             var bcscript = document.getElementById('bcscript');
             bcscript.setAttribute('src', srcString);
         }   
     </script>
-    <video-js id='video' data-player="default" data-embed="default" controls="" data-playlist-id=""
-        data-application-id="" width="960" height="540"> </video-js>
-    <script id='bcscript' script></script> 
+    <video-js id='video' data-embed="default" controls="" data-playlist-id="" data-application-id="" width="960"
+        height="540"> </video-js>
+    <script id='bcscript' script></script>
 </body>
