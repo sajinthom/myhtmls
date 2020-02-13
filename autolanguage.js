@@ -1,6 +1,6 @@
 videojs.registerPlugin('autolanguage', function () {
     var myPlayer = this;
-    myPlayer.on("loadedmetadata", function () {
+    myPlayer.on("canplay", function () {
 
         // +++ Get the browser language +++
         var browser_language = navigator.language ||
