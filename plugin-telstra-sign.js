@@ -6,7 +6,7 @@ var onPlayerReady = function (player, options) {
             setSource(srcObj, next) {
                 // modify source URL here
                 // source url will be available in srcObj.src
-                var src = { type: myPlayer.currentType(), src: sign(srcObj.src(), options) };
+                var src = sign(srcObj.src(), options);
                 console.log(src);
                 srcObj.src = src;
                 next(null, srcObj);
