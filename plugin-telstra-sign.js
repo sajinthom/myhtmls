@@ -8,7 +8,7 @@ var onPlayerReady = function (player, options) {
             setSource(srcObj, next) {
                 // modify source URL here
                 // source url will be available in srcObj.src
-                srcObj.src = sign(srcObj.src(), options);
+                srcObj.src = sign(srcObj.src, options);
                 next(null, srcObj);
             }
         };
