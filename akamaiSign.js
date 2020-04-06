@@ -7,7 +7,6 @@ function akamaiSign(url, options) {
     var endTime = startTime;
     var rawurl = url;
     var acl = "*";
-    var forge = require('node-forge');
 
     if (expiry) {
         if (!startTime) {
