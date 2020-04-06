@@ -33,7 +33,6 @@ function akamaiSign(url, options) {
     newToken.push("exp=" + endTime)
 
     newToken.push("acl=" + acl)
-    console.log("    newToken : " + newToken)
     hashSource = newToken.slice();
     key = hexStringToByte(key) //this is the vital part - convert hex string to binary string
     algorithm = algorithm.toLowerCase();
@@ -56,7 +55,8 @@ function akamaiSign(url, options) {
 
     }
     signedUrl = signedUrl + "hdnts=" + newToken;
-    console.log("    signed url  : " + signedUrl);
+    console.log("signed url  : " + signedUrl);
+    return signedUrl;
 
     function hexStringToByte(str) {
         if (!str) {
