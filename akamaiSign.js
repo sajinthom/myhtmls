@@ -1,4 +1,4 @@
-function sign(url, options) {
+function akamaiSign(url, options) {
     var algorithm = "SHA256";
     var key = options.key;
     var fieldDelimiter = '~';
