@@ -1,12 +1,22 @@
-videojs.registerPlugin('akamaiSign', function(options) {
-	var myPlayer = this;
-	var videoId;
-	myPlayer.one("loadstart", function(){
-		console.log('loadstart')
-		console.log(myPlayer.src())
-		var src = {type: myPlayer.currentType(),  src: akamaiSign(myPlayer.src(),options) };
-		console.log(src)
-		myPlayer.src(src)
-		console.log(myPlayer.src())
+var registerPlugin = videojs.registerPlugin || videojs.plugin;
+var defaults = {};
+var onPlayerReady = function (player, options) {
+	videojs.use('*', function (player) {
+		return {
+			setSource(srcObj, next) {
+				// modify source URL here
+				// source url will be available in srcObj.src
+				srcObj.src = akamaiSign(srcObj.src, options);
+				next(null, srcObj);
+			}
+		};
 	});
-});
+};
+
+var myPlugin = function (options) {
+	this.ready(() => {
+		onPlayerReady(this, videojs.mergeOptions(defaults, options));
+	});
+};
+
+registerPlugin('akamaiSign', myPlugin);
