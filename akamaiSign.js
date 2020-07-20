@@ -28,7 +28,8 @@ function akamaiSign(url, options) {
     var newToken = []
     var hashSource = []
     if (startTime) {
-        newToken.push("st=" + startTime)
+        //newToken.push("st=" + startTime)
+        // Avoiding start time
     }
     newToken.push("exp=" + endTime)
 
