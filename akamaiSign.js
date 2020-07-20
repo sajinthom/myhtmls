@@ -10,7 +10,7 @@ function akamaiSign(url, options) {
 
     if (expiry) {
         if (!startTime) {
-            startTime = parseInt(Date.now() / 1000);
+            startTime = parseInt(Date.now() / 1000) - 120;
         }
         endTime = parseInt(startTime) + parseInt(expiry);
     } else {
@@ -52,7 +52,6 @@ function akamaiSign(url, options) {
     }
     else {
         signedUrl = rawurl + "?";
-
     }
     signedUrl = signedUrl + "hdnts=" + newToken;
     console.log("signed url  : " + signedUrl);
@@ -66,7 +65,9 @@ function akamaiSign(url, options) {
 
         var key = '';
         for (var i = 0, len = str.length; i < len; i += 2) {
-            key += String.fromCharCode((parseInt(str.substr(i, 2), 16)));
+            key += String.fromCharCode((parseInt(str.substr(i,
+            2),
+            16)));
         }
 
         return key;
