@@ -1,5 +1,5 @@
 videojs.registerPlugin('logoOverlay', function (options) {
-    var player = this,
+    var player = this;
 
     function isDefined(x) {
         if (x === '' || x === null || x === undefined || x === NaN) {
