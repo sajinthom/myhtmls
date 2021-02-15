@@ -8,7 +8,7 @@
 
 <body>
 
-    <video-js id="myPlayerID" data-video-id="6114486101001" data-account="6057984925001" data-player="default"
+    <video-js id="myPlayerID" data-video-id="6146455796001" data-account="6057984925001" data-player="default"
         data-embed="default" data-application-id class="video-js" controls width="822" height="462"></video-js>
     <script src="https://players.brightcove.net/6057984925001/default_default/index.min.js"></script>
 
@@ -23,8 +23,7 @@
         var myPlayer = videojs.getPlayer('myPlayerID');
         myPlayer.ready(function () {
             var options = {
-                "debugAds": false, "logClasses": true,
-                "defaultResolution": "576p"
+                "debugAds": false, "logClasses": true
             };
             myPlayer.playerDebugger(options);
         });
