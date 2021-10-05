@@ -13,4 +13,12 @@ videojs.registerPlugin('hideInbandCCLabel', function () {
             }
         }
     });
+    player.one('playing', function () {
+        var tt = player.textTracks();
+        for (var i = 0; i < tt.length; i++) {
+            if (tt[i].mode === 'showing') {
+                tt[i].mode = 'disabled';
+            }
+        }
+    });
 });
