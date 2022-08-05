@@ -1,0 +1,251 @@
+<html>
+
+<head>
+    <title>Akamai URL Signer</title>
+
+    <script>
+    !function(a) {
+        var e = "https://s.go-mpulse.net/boomerang/",
+            t = "addEventListener";
+        if ("False" == "True")
+            a.BOOMR_config = a.BOOMR_config || {},
+            a.BOOMR_config.PageParams = a.BOOMR_config.PageParams || {},
+            a.BOOMR_config.PageParams.pci = !0,
+            e = "https://s2.go-mpulse.net/boomerang/";
+        if (window.BOOMR_API_key = "6Y5CT-GDTUD-64FBC-3MBRT-W8R7W", function() {
+            function n(e) {
+                a.BOOMR_onload = e && e.timeStamp || (new Date).getTime()
+            }
+            if (!a.BOOMR || !a.BOOMR.version && !a.BOOMR.snippetExecuted) {
+                a.BOOMR = a.BOOMR || {},
+                a.BOOMR.snippetExecuted = !0;
+                var i,
+                    _,
+                    o,
+                    r = document.createElement("iframe");
+                if (a[t])
+                    a[t]("load", n, !1);
+                else if (a.attachEvent)
+                    a.attachEvent("onload", n);
+                r.src = "javascript:void(0)",
+                r.title = "",
+                r.role = "presentation",
+                (r.frameElement || r).style.cssText = "width:0;height:0;border:0;display:none;",
+                o = document.getElementsByTagName("script")[0],
+                o.parentNode.insertBefore(r, o);
+                try {
+                    _ = r.contentWindow.document
+                } catch (O) {
+                    i = document.domain,
+                    r.src = "javascript:var d=document.open();d.domain='" + i + "';void(0);",
+                    _ = r.contentWindow.document
+                }
+                _.open()._l = function() {
+                    var a = this.createElement("script");
+                    if (i)
+                        this.domain = i;
+                    a.id = "boomr-if-as",
+                    a.src = e + "6Y5CT-GDTUD-64FBC-3MBRT-W8R7W",
+                    BOOMR_lstart = (new Date).getTime(),
+                    this.body.appendChild(a)
+                },
+                _.write("<bo" + 'dy onload="document._l();">'),
+                _.close()
+            }
+        }(), "".length > 0)
+            if (a && "performance" in a && a.performance && "function" == typeof a.performance.setResourceTimingBufferSize)
+                a.performance.setResourceTimingBufferSize();
+        !function() {
+            if (BOOMR = a.BOOMR || {}, BOOMR.plugins = BOOMR.plugins || {}, !BOOMR.plugins.AK) {
+                var e = "" == "true" ? 1 : 0,
+                    t = "",
+                    n = "ondbnbj2maeyuyxmrk5a-f-c51e0392a-clientnsv4-s.akamaihd.net",
+                    i = "false" == "true" ? 2 : 1,
+                    _ = {
+                        "ak.v": "32",
+                        "ak.cp": "948941",
+                        "ak.ai": parseInt("608385", 10),
+                        "ak.ol": "0",
+                        "ak.cr": 10,
+                        "ak.ipv": 4,
+                        "ak.proto": "h2",
+                        "ak.rid": "ba806b",
+                        "ak.r": 32852,
+                        "ak.a2": e,
+                        "ak.m": "r",
+                        "ak.n": "ff",
+                        "ak.bpcip": "115.70.22.0",
+                        "ak.cport": 43509,
+                        "ak.gh": "58.96.9.134",
+                        "ak.quicv": "",
+                        "ak.tlsv": "tls1.2",
+                        "ak.0rtt": "",
+                        "ak.csrc": "-",
+                        "ak.acc": "",
+                        "ak.t": "1659669178",
+                        "ak.ak": "hOBiQwZUYzCg5VSAfCLimQ==IN7Lw2C5cQzq5WZZTgfjHuh8JACi+bxg6E00ghW4fl36MR+aug3x6HBRbFsMT0rQ4OjofRip7ifFclRWmmzV17oruDAeVaVx6PpI7ZBtTE9nPJ7APxbcgiXSv/G7WbiA5AkZyOcNaiMWLJtYXBYuY8P1/HlkDqR0YmFDnbmJFhsrMqmb40dD1kR6UsUpSttvxrHGuLMcNf61HRpOKo5KZz/INb2driIR3g610C2pz0RjBEyrwiQgbU/FLjYqBXcXY+eKU0K4XvwsYuKeChSGXG4ZCwFoKTvJY3PeWYWTtRl6uiVbzbfyHbGN8vIHou2j6c4yPXMSOtmqf4BCyztwGC1fDMWalVN4mGYA92rriwDsxMrdvvbQAiRDsmEUTtBZivbHYiJ3+oD17PofWPAHb8Qva7jP3tscCBEP1/iBogA=",
+                        "ak.pv": "12",
+                        "ak.dpoabenc": "",
+                        "ak.tf": i
+                    };
+                if ("" !== t)
+                    _["ak.ruds"] = t;
+                var o = {
+                    i: !1,
+                    av: function(e) {
+                        var t = "http.initiator";
+                        if (e && (!e[t] || "spa_hard" === e[t]))
+                            _["ak.feo"] = void 0 !== a.aFeoApplied ? 1 : 0,
+                            BOOMR.addVar(_)
+                    },
+                    rv: function() {
+                        var a = ["ak.bpcip", "ak.cport", "ak.cr", "ak.csrc", "ak.gh", "ak.ipv", "ak.m", "ak.n", "ak.ol", "ak.proto", "ak.quicv", "ak.tlsv", "ak.0rtt", "ak.r", "ak.acc", "ak.t", "ak.tf"];
+                        BOOMR.removeVar(a)
+                    }
+                };
+                BOOMR.plugins.AK = {
+                    akVars: _,
+                    akDNSPreFetchDomain: n,
+                    init: function() {
+                        if (!o.i) {
+                            var a = BOOMR.subscribe;
+                            a("before_beacon", o.av, null, null),
+                            a("onbeacon", o.rv, null, null),
+                            o.i = !0
+                        }
+                        return this
+                    },
+                    is_complete: function() {
+                        return !0
+                    }
+                }
+            }
+        }()
+    }(window);
+    </script>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/node-forge@1.0.0/dist/forge.min.js"></script>
+    <h2>Akamai URL Signer</h2>
+    <form>
+
+        <div>
+            <label for="url">URL (m3u8/mpd): </label>
+            <input type="text" id="url" name="url" required>
+            <br>
+            <br>
+            <label for="key">Key : </label>
+            <input type="text" id="key" name="key" required>
+            <br>
+            <br>
+            <label for="expiry">End time (epoch): </label>
+            <input type="text" id="expiry" name="expiry" required>
+            <br>
+            <br>
+            <input type="submit" value="Submit" onclick="akamaiSign()"/>
+        </div>
+    </form>
+
+    <div id="myData"></div>
+
+    <script type="text/javascript">
+
+    function akamaiSign() {
+        try {
+            var algorithm = "SHA256";
+            // Insert keys here
+            var key = document.getElementById("key").value;
+            var rawurl = document.getElementById("url").value;
+            // Insert Akamai URL to be signed here 
+            var fieldDelimiter = '~';
+            var startTime;
+            var endTime = document.getElementById("expiry").value;
+
+            var acl = '';
+            var reg = /.+?\:\/\/.+?(\/.+?)(?:#|\?|$)/;
+            var path = reg.exec(rawurl)[1];
+            var path = path.split('/');
+
+            for (i = 0; i < path.length - 1; i++) {
+                acl += path[i];
+                acl += "/";
+            }
+            acl += "*";
+
+
+            if (expiry) {
+                if (!startTime) {
+                    startTime = parseInt(Date.now() / 1000);
+                }
+                if (!endTime) {
+                    endTime = parseInt(startTime) + parseInt(expiry);
+                }
+            } else {
+                throw new Error('You must provide endTime or windowSeconds')
+            }
+
+            var newToken = []
+            var hashSource = []
+            if (startTime) {
+
+            }
+            newToken.push("exp=" + endTime);
+
+            newToken.push("acl=" + acl)
+            hashSource = newToken.slice();
+            key = hexStringToByte(key) //this is the vital part - convert hex string to binary string
+            algorithm = algorithm.toLowerCase();
+
+            var hmac = forge.hmac.create();
+            hmac.start(algorithm, key);
+            hmac.update(hashSource.join(fieldDelimiter));
+
+            var hash = hmac.digest().toHex();
+            newToken.push("hmac=" + hash);
+
+            newToken = newToken.join(fieldDelimiter);
+
+            var signedUrl = rawurl;
+            if (rawurl.includes("?")) {
+                signedUrl = rawurl + "&";
+            }
+            else {
+                signedUrl = rawurl + "?";
+
+            }
+            signedUrl = signedUrl + "hdnts=" + newToken;
+            console.log("signed url  : " + signedUrl);
+            // return signedUrl;
+            alert("signed url  : " + signedUrl);
+
+            var summaryContainer = document.getElementById("myData");
+            var divJsonOutput = document.createElement("div");
+            divJsonOutput.innerHTML = "<h3>" + signedUrl + "</h3>";
+            summaryContainer.appendChild(divJsonOutput);
+
+            function hexStringToByte(str) {
+                if (!str) {
+                    return new Uint8Array();
+                }
+
+
+                var key = '';
+                for (var i = 0, len = str.length; i < len; i += 2) {
+                    key += String.fromCharCode((parseInt(str.substr(i, 2), 16)));
+                }
+
+                return key;
+            }
+        } catch (error) {
+            alert("Error: " + error.message);
+            console.log(error.stack);
+
+        }
+    }
+    </script>
+</body>
+
+</html>
+
